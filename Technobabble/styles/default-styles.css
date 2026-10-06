@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+body {
+    font-family: monospace;
+}
+
+#output {
+    font-size: 200%;
+}
+
+.button-gen {
+    width: 200px;
+    height: 50pt;
+    font-size: 15pt;
+}
+
+/* #btn-gen-5 is hidden by default; it is only revealed at the "fullhd" (1408px) breakpoint */
+#btn-gen-5 {
+    display: none;
+}
+
+h1 {
+    font-family: 'Black Ops One';
+}
+
+/* my own smaller phone */
+@media only screen and (min-width:240px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    html, body, .container {
+        height: 100%;
+        margin: 0;
+    }
+    h1 {
+        font-size: 1rem;
+        background-color: #ffd000;
+        color: #f5f5f5;
+        padding: .8rem;
+        margin: 0;
+        text-align: center;
+    }
+    #output {
+        text-align: center;
+    }
+}
+
+/* phone */
+@media only screen and (min-width:320px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    html, body, .container {
+        height: 100%;
+        margin: 0;
+    }
+    h1 {
+        font-size: 1.2rem;
+        background-color: #174287;
+        color: #f5f5f5;
+        padding: .8rem;
+        margin: 0;
+        text-align: center;
+    }
+    #output {
+        text-align: center;
+    }
+}
+
+/* ipad */
+@media only screen and (min-width:768px) {
+    h1 {
+        font-size: 3rem;
+        background-color: #23D160;
+    }
+    .button-gen {
+        width: 300px;
+        height: 75pt;
+        font-size: 1.5rem;
+    }
+    body {
+        color: darkgray;
+        font-size: 2rem;
+    }
+}
+
+/* desktops */
+@media only screen and (min-width:1024px) {
+    body {
+        font-size: 1rem;
+        text-align: left;
+    }
+    h1 {
+        background-color: #FF3860;
+    }
+    .container {
+        display: block;
+        margin: 1rem;
+    }
+    #output {
+        text-align: left;
+    }
+}
+
+/* 1408px screen (Bulma's "fullhd") */
+@media only screen and (min-width:1408px) {
+    body {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 4rem;
+        background-color: rgb(177, 56, 0)
+    }
+    #btn-gen-5 {
+        display: inline-block;
+    }
+}
