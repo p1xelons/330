@@ -1,0 +1,38 @@
+{
+    "video_games": [
+        "The Legend of Zelda: Breath of the Async",
+        "Super Mario Breakpoint",
+        "Call of Duty: Event Listener Ops",
+        "Grand Theft Auto: Vice Variable",
+        "Final Fantasy Fetch",
+        "Metal Gear Solid-State",
+        "Red Dead Refactoring",
+        "Resident Syntax",
+        "Half-Life: Lambda Trigger",
+        "Portal Promise"
+    ],
+    "board_games": [
+        "Settlers of Const-an",
+        "Ticket to .map()",
+        "Pandemic: Global Scope",
+        "Clue() with Arguments",
+        "Risk: Legacy Code",
+        "Codenames & Callbacks",
+        "Terraforming Node",
+        "Carcass-onClick",
+        "Battleship();",
+        "Uno.reverse()"
+    ],
+    "casual_games": [
+        "Candy Crush Operator",
+        "Angry Birds.reduce()",
+        "Flappy Function",
+        "2048-bit Array",
+        "Wordle.parse()",
+        "Sudoku.setInterval()",
+        "Bejeweled Event Loop",
+        "Minesweeper.tryCatch()",
+        "Temple Run Callback",
+        "Peggle Promise"
+    ]
+}
