@@ -1,15 +1,14 @@
 import { formatGreeting } from "./utils";
 
-const input:HTMLInputElement = document.querySelector("#input-firstname");
-const output:HTMLParagraphElement = document.querySelector("#output");
-const cbForcefully:HTMLInputElement = document.querySelector("#cb-forcefully");
+const input = document.querySelector<HTMLInputElement>("#input-firstname")!;
+const output = document.querySelector<HTMLParagraphElement>("#output")!;
+const cbForcefully = document.querySelector<HTMLInputElement>("#cb-forcefully")!;
 
-const helloButton:HTMLButtonElement = document.querySelector("#btn-hello");
-const goodbyeButton:HTMLButtonElement = document.querySelector("#btn-goodbye");
+const helloButton = document.querySelector<HTMLButtonElement>("#btn-hello")!;
+const goodbyeButton = document.querySelector<HTMLButtonElement>("#btn-goodbye")!;
 
-let forcefully:boolean = cbForcefully.checked;
+let forcefully: boolean = cbForcefully.checked;
 
-//cbForcefully.onchange = () => forcefully = cbForcefully.checked;
 cbForcefully.onchange = e => forcefully = (e.target as HTMLInputElement).checked;
-helloButton.onclick = () => output.innerHTML = formatGreeting("Hello",input.value.trim(), forcefully);
-goodbyeButton.onclick = () => output.innerHTML = formatGreeting("Goodbye",input.value.trim(), forcefully);
+helloButton.onclick = () => output.innerHTML = formatGreeting("Hello", input.value.trim(), forcefully);
+goodbyeButton.onclick = () => output.innerHTML = formatGreeting("Goodbye", input.value.trim(), forcefully);
