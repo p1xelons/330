@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapbox</title>
+    <!-- Includes the Mapbox GL JS CSS stylesheet -->
+     <link href="https://api.mapbox.com/mapbox-gl-js/v3.33.0/mapbox-gl.css" rel="stylesheet">
+     <!-- Imports the Mapbox GL JS bundle -->
+      <script src="https://api.mapbox.com/mapbox-gl-js/v3.33.0/mapbox-gl.js"></script>
+</head>
+<body>
+    <div id="map" style="position: absolute; top: 0; bottom: 0; width: 100%;"></div>
+    <script>
+    // creates the map, passing your access token to associate it with your Mapbox account, and setting the container, initial center, and zoom level
+    const map = new mapboxgl.Map({
+    accessToken: 'pk.eyJ1IjoicDF4ZWxvbnMiLCJhIjoiY213Y2Zrd200MDF5ejJ5cHYzNGFscHg3cSJ9.PeOrmQxuD4ZPBW4d5Vum9w',
+    container: 'map', // container ID
+    center: [-71.06776, 42.35816], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+    zoom: 9 // starting zoom
+    });
+
+    map.setZoom(9);
+    map.setCenter([-77.6799,43.083848]);
+    map.addControl(new mapboxgl.NavigationControl());
+    map.setStyle('mapbox://styles/mapbox/dark-v11');
+</script>
+</body>
+</html>
