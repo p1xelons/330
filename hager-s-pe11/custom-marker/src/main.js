@@ -1,6 +1,6 @@
 const init = () => {
     const map = new mapboxgl.Map({
-    accessToken: 'pk.eyJ1IjoicDF4ZWxvbnMiLCJhIjoiY213Y2Zrd200MDF5ejJ5cHYzNGFscHg3cSJ9.PeOrmQxuD4ZPBW4d5Vum9w',
+    accessToken: '',
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v11',
     center: [-96, 37.8],
