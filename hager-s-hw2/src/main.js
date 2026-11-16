@@ -4,7 +4,7 @@ import * as canvas from './canvas.js';
 
 let startButton, stopButton, statusElement;
 
-function init() {
+const init = () => {
     // get html elements
   const canvasElement = document.querySelector("canvas");
   startButton = document.querySelector("#start-button");
@@ -40,7 +40,7 @@ function init() {
   loop();
 }
 
-function loop() {
+const loop = () => {
   requestAnimationFrame(loop);
   const running = audio.isRunning();
   const result = running ? audio.detectNote() : { note: "No note" };

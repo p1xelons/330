@@ -6,7 +6,7 @@ let lastNote = "No note";
 
 const BarCount = 64;
 
-function setupCanvas(canvasElement) {
+const setupCanvas = (canvasElement) => {
   ctx = canvasElement.getContext("2d");
   canvasWidth = canvasElement.width;
   canvasHeight = canvasElement.height;
@@ -18,7 +18,7 @@ function setupCanvas(canvasElement) {
   clear();
 }
 
-function draw({ result, spectrum, running }) {
+const draw = ({ result, spectrum, running }) => {
   const hasNote = running && result.note !== "No note";
 
   // background
@@ -92,7 +92,7 @@ function draw({ result, spectrum, running }) {
   ctx.restore();
 }
 
-function clear() {
+const clear = () => {
   echoes = [];
   lastNote = "No note";
   ctx.fillStyle = gradient;

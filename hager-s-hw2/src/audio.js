@@ -6,7 +6,7 @@ const FftSize = 4096;
 const MinStrength = -55;
 const NoteNames = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
 
-async function start() {
+const start = async () => {
   const AC = window.AudioContext || window.webkitAudioContext;
   audioCtx = audioCtx || new AC();
   if (audioCtx.state === "suspended") await audioCtx.resume();
@@ -25,7 +25,7 @@ async function start() {
   sourceNode.connect(analyserNode);
 }
 
-function stop() {
+const stop = () => {
   if (stream) stream.getTracks().forEach(t => t.stop());
   if (sourceNode) sourceNode.disconnect();
   stream = sourceNode = analyserNode = null;
@@ -34,7 +34,7 @@ function stop() {
 const isRunning = () => !!analyserNode;
 
 // returns {note, strength}
-function detectNote() {
+const detectNote = () => {
   if (!analyserNode) return { note: "No note", strength: -Infinity };
   analyserNode.getFloatFrequencyData(magnitudes);
 
